@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiClient {
 
-    private const val BASE_URL = "https://raw.githubusercontent.com/"
+    private const val BASE_URL = "https://api.mercadolibre.com/sites/MLA/"
     private const val TIME_OUT = 6000L
 
     private val logInterceptor = HttpLoggingInterceptor().apply {
