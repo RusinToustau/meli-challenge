@@ -1,8 +1,6 @@
 package com.meli.challenge.views.search
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -36,30 +34,11 @@ class SearchViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initAdapter()
-        initTextWatcher()
-    }
-
-    private fun  initTextWatcher() {
-        binding.searchItem.addTextChangedListener( object : TextWatcher {
-
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { /*** DO NOTHING ***/ }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { updateRepoListFromInput() }
-
-            override fun afterTextChanged(p0: Editable?) {  /*** DO NOTHING ***/ }
-        })
+        intent?.extras?.getString(QUERY_KEY)?.let { query -> search(query) }
     }
 
     private fun initAdapter() {
         binding.resultList.adapter = adapter
-    }
-
-    private fun updateRepoListFromInput() {
-        binding.searchItem.text.trim().let {
-            if (it.isNotEmpty()) {
-                search(it.toString())
-            }
-        }
     }
 
     private fun search(query: String) {
@@ -69,5 +48,9 @@ class SearchViewActivity : AppCompatActivity() {
                 adapter.submitData(it)
             }
         }
+    }
+
+    companion object {
+        const val QUERY_KEY = "query_suggested"
     }
 }

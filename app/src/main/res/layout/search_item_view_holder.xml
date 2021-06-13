@@ -42,9 +42,13 @@
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/itemGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="visible"
-        app:constraint_referenced_ids="searchButton,itemName" />
+        app:constraint_referenced_ids="searchButton,itemName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/itemName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,10 @@ import com.meli.challenge.base.BaseActivity
 import com.meli.challenge.base.BaseViewModel
 import com.meli.challenge.core.api.ApiClient
 import com.meli.challenge.databinding.ActivitySearchItemBinding
+import com.meli.challenge.extensions.openActivity
 import com.meli.challenge.model.SuggestionResponse
+import com.meli.challenge.views.search.SearchViewActivity
+import com.meli.challenge.views.search.SearchViewActivity.Companion.QUERY_KEY
 import com.meli.challenge.views.suggestion.adapter.SuggestionAdapter
 import com.meli.challenge.views.suggestion.repository.SuggestionRepository
 import com.meli.challenge.views.suggestion.repository.SuggestionRepositoryImpl
@@ -67,7 +70,8 @@ class ExplorerActivity :  BaseActivity<SuggestionResponse,ActivitySearchItemBind
 
     override fun getViewModel(): BaseViewModel<SuggestionResponse> = viewModel
 
-    override fun onUserClickSuggestion(query: String?) { /*TODO("Move to another activity")*/ }
+    override fun onUserClickSuggestion(query: String?) =
+            openActivity(SearchViewActivity::class.java) { putString(QUERY_KEY, query) }
 
     override fun replaceQueryParameter(query: String?) = binding.searchItem.setText(query)
 
