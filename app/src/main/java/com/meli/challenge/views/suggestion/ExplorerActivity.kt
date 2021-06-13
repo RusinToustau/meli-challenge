@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import com.meli.challenge.base.BaseActivity
 import com.meli.challenge.base.BaseViewModel
 import com.meli.challenge.core.api.ApiClient
-import com.meli.challenge.databinding.ActivitySearchItemBinding
+import com.meli.challenge.databinding.ExplorerActivityBinding
 import com.meli.challenge.extensions.openActivity
 import com.meli.challenge.model.SuggestionResponse
 import com.meli.challenge.views.search.SearchViewActivity
@@ -20,7 +20,7 @@ import com.meli.challenge.views.suggestion.service.SuggestionService
 import com.meli.challenge.views.suggestion.viewmodel.ExplorerViewModel
 import com.meli.challenge.views.suggestion.viewmodel.ExplorerViewModelFactory
 
-class ExplorerActivity :  BaseActivity<SuggestionResponse,ActivitySearchItemBinding>(),
+class ExplorerActivity :  BaseActivity<SuggestionResponse,ExplorerActivityBinding>(),
         SuggestionAdapter.Listener {
 
     private val service: SuggestionService = ApiClient.retrofit.create(SuggestionService::class.java)
@@ -60,7 +60,7 @@ class ExplorerActivity :  BaseActivity<SuggestionResponse,ActivitySearchItemBind
         binding.resultList.adapter = adapter
     }
 
-    override fun getViewBinding() = ActivitySearchItemBinding.inflate(layoutInflater).apply {
+    override fun getViewBinding() = ExplorerActivityBinding.inflate(layoutInflater).apply {
         closeButton.setOnClickListener { searchItem.setText("") }
     }
 

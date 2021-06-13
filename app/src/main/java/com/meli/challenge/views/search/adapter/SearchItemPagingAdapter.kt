@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.meli.challenge.databinding.SearchItemViewHolderBinding
+import com.meli.challenge.databinding.ItemViewHolderBinding
+import com.meli.challenge.extensions.loadurl
 import com.meli.challenge.model.Item
 
 class SearchItemPagingAdapter()
@@ -26,14 +27,15 @@ class SearchItemPagingAdapter()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemBinding = SearchItemViewHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemBinding = ItemViewHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemBinding)
     }
 
-    class ViewHolder(private val binding: SearchItemViewHolderBinding)
+    class ViewHolder(private val binding: ItemViewHolderBinding)
         : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item){
-            binding.itemName.text = item.title
+            binding.itemImage.loadurl(item.thumbnail)
+            binding.itemTitle.text = item.title
         }
     }
 
