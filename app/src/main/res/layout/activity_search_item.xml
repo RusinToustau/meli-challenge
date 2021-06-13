@@ -30,17 +30,6 @@
             android:background="@drawable/close_button" />
     </androidx.appcompat.widget.Toolbar>
 
-    <include
-        android:id="@+id/loadingView"
-        layout="@layout/loading_view"
-        android:visibility="gone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/resultList"
-        app:layout_constraintEnd_toEndOf="@+id/resultList"
-        app:layout_constraintStart_toStartOf="@+id/resultList"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/resultList"
         android:layout_width="0dp"
@@ -51,5 +40,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <include
+        android:id="@+id/loadingView"
+        layout="@layout/loading_view"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultList"
+        app:layout_constraintEnd_toEndOf="@+id/resultList"
+        app:layout_constraintStart_toStartOf="@+id/resultList"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

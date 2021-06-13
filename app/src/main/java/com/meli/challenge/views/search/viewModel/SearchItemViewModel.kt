@@ -1,5 +1,6 @@
 package com.meli.challenge.views.search.viewModel
 
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
@@ -8,7 +9,7 @@ import com.meli.challenge.model.Item
 import com.meli.challenge.views.search.repository.SearchItemRepository
 import kotlinx.coroutines.flow.Flow
 
-class SearchItemViewModel(private val repository: SearchItemRepository) : BaseViewModel<List<Item>>() {
+class SearchItemViewModel(private val repository: SearchItemRepository) : ViewModel() {
 
     private var currentQueryValue: String? = null
     private var currentSearchResult: Flow<PagingData<Item>>? = null
