@@ -10,8 +10,9 @@ interface SearchResultService {
 
     @GET("search")
     suspend fun getItems(
+            @Query("q") query: String,
             @Query("offset") offset: Int,
-            @Query("offset") limit: Int,
+            @Query("limit") limit: Int,
     ): Response<BaseListResponse<Item>>
 
 }
