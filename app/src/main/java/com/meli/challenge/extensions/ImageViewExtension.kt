@@ -6,7 +6,7 @@ import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders
 import com.bumptech.glide.request.RequestOptions
 
-fun ImageView.loadurl(url: String){
+fun ImageView.loadurl(url: String?){
     val glideUrl = GlideUrl(
         url, LazyHeaders.Builder()
             .addHeader(
