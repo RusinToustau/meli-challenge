@@ -6,12 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/searchButton"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_margin="5dp"
-        android:background="null"
         android:src="@drawable/ic_baseline_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,14 +28,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ojotas hombre" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton2"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="right"
         android:layout_margin="5dp"
         android:layout_marginEnd="4dp"
-        android:background="null"
         android:rotation="-45"
         android:src="@drawable/ic_baseline_arrow_upward"
         app:layout_constraintEnd_toEndOf="parent"

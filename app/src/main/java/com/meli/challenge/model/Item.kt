@@ -5,7 +5,7 @@ data class Item (
     val siteID: String?,
     val title: String?,
     val seller: Seller?,
-    val price: Long?,
+    val price: Double?,
     val currencyID: String?,
     val availableQuantity: Long?,
     val soldQuantity: Long?,

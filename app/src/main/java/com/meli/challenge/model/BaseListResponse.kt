@@ -4,5 +4,5 @@ data class BaseListResponse<T> (
     val siteId: String?,
     val query: String?,
     val paging: Paging?,
-    val results: List<T>
+    val results: List<T>? = ArrayList()
 )
