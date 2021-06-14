@@ -1,7 +1,5 @@
 package com.meli.challenge.views.suggestion.service
 
-import com.meli.challenge.model.BaseListResponse
-import com.meli.challenge.model.Item
 import com.meli.challenge.model.SuggestionResponse
 import retrofit2.Response
 import retrofit2.http.GET
