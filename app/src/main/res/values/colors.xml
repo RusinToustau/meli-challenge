@@ -14,5 +14,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="ml_cursor_color">#035BF4</color>
+    <color name="ml_grey_400">#D1D1D1</color>
+    <color name="grey_300_alpha_70">#B3E8E8E8</color>
 
 </resources>
