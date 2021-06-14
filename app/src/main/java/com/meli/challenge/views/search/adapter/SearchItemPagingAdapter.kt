@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.meli.challenge.R
 import com.meli.challenge.databinding.ItemViewHolderBinding
 import com.meli.challenge.extensions.loadurl
 import com.meli.challenge.model.Item
@@ -36,6 +37,7 @@ class SearchItemPagingAdapter()
         fun bind(item: Item){
             binding.itemImage.loadurl(item.thumbnail)
             binding.itemTitle.text = item.title
+            binding.itemPrice.text = binding.root.resources.getString(R.string.price_format, item.price.toString())
         }
     }
 
