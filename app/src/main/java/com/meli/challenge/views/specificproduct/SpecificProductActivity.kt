@@ -26,7 +26,7 @@ class SpecificProductActivity : BaseActivity<Item, ActivitySpecificProductBindin
         super.onStart()
         addObservers()
         getProductID()
-        setToolbar(binding.toolbar)
+        setToolbar(binding.simpleToolbar.toolbar)
     }
 
     private fun getProductID() = intent?.extras?.getString(PRODUCT_ID)?.let { id ->

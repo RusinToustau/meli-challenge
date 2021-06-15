@@ -33,7 +33,7 @@ class SearchViewActivity : AppCompatActivity() {
 
         binding = ActivitySearchItemBinding.inflate(layoutInflater).apply {
             setContentView(root)
-            setToolbar(toolbar)
+            setToolbar(simpleToolbar.toolbar)
         }
 
         initAdapter()
