@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface SuggestionService {
 
-    @GET("autosuggest")
+    @GET("sites/MLA/autosuggest")
     suspend fun getSuggest(
             @Query("showFilters") showFilter: Boolean? = true,
             @Query("limit") limit: Int = 6,

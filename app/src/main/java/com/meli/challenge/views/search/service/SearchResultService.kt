@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface SearchResultService {
 
-    @GET("search")
+    @GET("sites/MLA/search")
     suspend fun getItems(
             @Query("q") query: String,
             @Query("offset") offset: Int,
