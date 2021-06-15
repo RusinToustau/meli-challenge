@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.meli.challenge.core.api.ApiClient
 import com.meli.challenge.databinding.ActivitySearchItemBinding
+import com.meli.challenge.extensions.setToolbar
 import com.meli.challenge.views.search.adapter.SearchItemPagingAdapter
 import com.meli.challenge.views.search.repository.SearchItemRepository
 import com.meli.challenge.views.search.repository.SearchItemRepositoryImpl
@@ -30,8 +31,10 @@ class SearchViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySearchItemBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = ActivitySearchItemBinding.inflate(layoutInflater).apply {
+            setContentView(root)
+            setToolbar(toolbar)
+        }
 
         initAdapter()
         intent?.extras?.getString(QUERY_KEY)?.let { query -> search(query) }
