@@ -10,6 +10,7 @@ import com.meli.challenge.base.BaseViewModel
 import com.meli.challenge.core.api.ApiClient
 import com.meli.challenge.databinding.ExplorerActivityBinding
 import com.meli.challenge.extensions.openActivity
+import com.meli.challenge.extensions.setToolbar
 import com.meli.challenge.model.SuggestionResponse
 import com.meli.challenge.views.search.SearchViewActivity
 import com.meli.challenge.views.search.SearchViewActivity.Companion.QUERY_KEY
@@ -34,6 +35,7 @@ class ExplorerActivity :  BaseActivity<SuggestionResponse,ExplorerActivityBindin
         initAdapter()
         addObservers()
         initTextWatcher()
+        setToolbar(binding.toolbar)
     }
 
     private fun  initTextWatcher() {

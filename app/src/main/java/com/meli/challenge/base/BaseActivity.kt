@@ -29,21 +29,6 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
     abstract fun getViewModel(): BaseViewModel<T>
     abstract fun getRetryAction(): (()-> Unit)?
 
-    protected fun setupToolbar(toolbar: Toolbar?) {
-        toolbar?.setNavigationIcon(R.drawable.ic_arrow_back)
-
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-            setDisplayShowTitleEnabled(false)
-        }
-
-        toolbar?.setNavigationOnClickListener {
-            onBackPressed()
-        }
-    }
-
     fun addObservers() {
         addOnSuccessObserver()
         addOnErrorObserver()

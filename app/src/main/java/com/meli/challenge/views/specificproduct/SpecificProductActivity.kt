@@ -8,6 +8,7 @@ import com.meli.challenge.base.BaseViewModel
 import com.meli.challenge.core.api.ApiClient
 import com.meli.challenge.databinding.ActivitySpecificProductBinding
 import com.meli.challenge.extensions.loadurl
+import com.meli.challenge.extensions.setToolbar
 import com.meli.challenge.model.Item
 import com.meli.challenge.views.specificproduct.repository.SpecificProductRepository
 import com.meli.challenge.views.specificproduct.repository.SpecificProductRepositoryImpl
@@ -25,7 +26,7 @@ class SpecificProductActivity : BaseActivity<Item, ActivitySpecificProductBindin
         super.onStart()
         addObservers()
         getProductID()
-        setupToolbar(binding.toolbar)
+        setToolbar(binding.simpleToolbar.toolbar)
     }
 
     private fun getProductID() = intent?.extras?.getString(PRODUCT_ID)?.let { id ->
