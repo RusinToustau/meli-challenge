@@ -20,6 +20,7 @@
         </activity>
 
         <activity android:name=".views.search.SearchViewActivity"/>
+        <activity android:name=".views.specificproduct.SpecificProductActivity"/>
 
     </application>
 
