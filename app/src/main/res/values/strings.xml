@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Challenge</string>
+
+    <!-- Error Strings -->
+    <string name="error_title">THIS IS AN ERROR</string>
+    <string name="error_description">Please Retry</string>
+    <string name="retry_button">Retry</string>
+
+    <!-- Unauthorized Strings -->
+    <string name="unauthorized_title">THIS IS AN ERROR</string>
+    <string name="unauthorized_description">Please logout and login later</string>
+    <string name="find_in_mercado_libre">Buscar en Mercado Libre</string>
+
+    <!-- Price -->
+    <string name="price_format">$  %1$s</string>
+
 </resources>

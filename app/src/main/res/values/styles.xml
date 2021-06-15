@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.ML.EditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">?attr/editTextColor</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textCursorDrawable">@drawable/ml_cursor</item>
+    </style>
+</resources>
