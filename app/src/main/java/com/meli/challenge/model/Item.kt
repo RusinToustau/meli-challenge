@@ -25,5 +25,6 @@ data class Item (
     val officialStoreId: Long?,
     val catalogProductId: String?,
     val tags: List<String>?,
-    val catalogListing: Boolean?
+    val catalogListing: Boolean?,
+    val pictures: List<Picture>?
 )
