@@ -2,6 +2,13 @@
 
 https://user-images.githubusercontent.com/28780954/121982007-15703c00-cd65-11eb-969f-aabdacc6f1e9.mp4
 
+La idea de armar esta app surge a partir de un challenge que recibí esta semana por parte de mercado libre. 
+
+El fin de la misma es la de de pode mostrar el flujo de una búsqueda cumpliendo con el enunciado.
+
+Para comprende el flujo mirar la documentación [más info del flujo...](https://github.com/RusinToustau/meli-challenge/blob/feature/add_documentation/FLOW.md)
+
+
 ## Arquitectura de app
 
 <img src="https://user-images.githubusercontent.com/28780954/121982153-5f592200-cd65-11eb-8ca6-837e42a42f2d.png" width="600">
