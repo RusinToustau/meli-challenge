@@ -44,7 +44,7 @@ class SuggestionRepositoryTest {
 
         val result = repository.getSuggestedQuery(query = QUERY_EXAMPLE)
 
-        junit.framework.Assert.assertEquals(result.status, Status.UNAUTHORIZED)
+        Assert.assertEquals(result.status, Status.UNAUTHORIZED)
     }
 
     @Test
@@ -54,7 +54,7 @@ class SuggestionRepositoryTest {
 
         val result = repository.getSuggestedQuery(query = QUERY_EXAMPLE)
 
-        junit.framework.Assert.assertEquals(result.status, Status.CLIENT_ERROR)
+        Assert.assertEquals(result.status, Status.CLIENT_ERROR)
     }
 
     companion object {

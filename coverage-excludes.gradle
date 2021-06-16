@@ -1,0 +1,21 @@
+def fileFilter = [
+        '**/R.class',
+        '**/R$*.class',
+        '**/BuildConfig.*',
+        '**/Manifest*.*',
+        'com/meli/challenge/model*.*',
+        '**/com/meli/challenge/model*.*',
+        '**/*model/*.*',
+        "**/*ViewHolder*.*",
+        "**/*Adapter*.*",
+        'android/**/*.*']
+
+def fileFilterConcatenated = fileFilter.join(", ")
+
+def excludes = [:]
+
+excludes.list = fileFilter
+excludes.string = fileFilterConcatenated
+
+ext.excludes = excludes
+
