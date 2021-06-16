@@ -4,6 +4,8 @@ plugins {
 }
 
 apply from: '../dependecies.gradle'
+apply from: '../coverage-excludes.gradle'
+apply from: '../jacocco.gradle'
 
 android {
     compileSdkVersion 30
@@ -18,8 +20,15 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    lintOptions {
+        abortOnError true
+        warningsAsErrors false
+        warning 'InvalidPackage'
+    }
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -37,7 +46,14 @@ android {
     }
     testOptions {
         unitTests {
+            all{
+                jacoco{
+                    includeNoLocationClasses = true
+                }
+            }
             includeAndroidResources = true
+            returnDefaultValues = true
         }
     }
 }
+

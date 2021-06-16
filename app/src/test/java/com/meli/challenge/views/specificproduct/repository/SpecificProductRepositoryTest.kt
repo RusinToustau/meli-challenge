@@ -6,7 +6,7 @@ import com.meli.challenge.views.specificproduct.service.SpecificProductService
 import com.utils.ErrorResponses.badRequestResponse
 import com.utils.ErrorResponses.unauthorizedResponse
 import com.utils.TestUtils.getObjectFromJsonResource
-import junit.framework.Assert.assertEquals
+import org.junit.Assert.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
