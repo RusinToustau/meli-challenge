@@ -1,0 +1,47 @@
+{
+  "q": "ojotas",
+  "suggested_queries": [
+    {
+      "q": "ojotas",
+      "match_start": 0,
+      "match_end": 6,
+      "filters": [
+      ]
+    },
+    {
+      "q": "ojotas hombre",
+      "match_start": 0,
+      "match_end": 6,
+      "filters": [
+      ]
+    },
+    {
+      "q": "ojotas mujer",
+      "match_start": 0,
+      "match_end": 6,
+      "filters": [
+      ]
+    },
+    {
+      "q": "ojotas nike",
+      "match_start": 0,
+      "match_end": 6,
+      "filters": [
+      ]
+    },
+    {
+      "q": "ojotas ipanema",
+      "match_start": 0,
+      "match_end": 6,
+      "filters": [
+      ]
+    },
+    {
+      "q": "adidas ojotas",
+      "match_start": 7,
+      "match_end": 13,
+      "filters": [
+      ]
+    }
+  ]
+}

@@ -48,7 +48,7 @@ class SpecificProductViewModelTest {
     }
 
     @Test
-    fun whenUserRequestSpecificItemViewModelsReturnsIt() = runBlocking() {
+    fun whenUserRequestSpecificItemViewModelsReturnsIt() = runBlocking {
 
         Mockito.`when`(repository.getSpecificProduct(FAKE_PRODUCT_ID))
             .thenReturn(RESULT_ITEM)
@@ -64,7 +64,7 @@ class SpecificProductViewModelTest {
     }
 
     @Test
-    fun whenUserRequestSpecificItemRepositoryReturnsAnException() = runBlocking() {
+    fun whenUserRequestSpecificItemRepositoryReturnsAnException() = runBlocking {
 
         given(repository.getSpecificProduct(FAKE_PRODUCT_ID)).willAnswer {
             throw SocketTimeoutException("You lose internet connection")
