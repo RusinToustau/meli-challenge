@@ -3,18 +3,18 @@ plugins {
     id 'kotlin-android'
 }
 
-apply from: '../dependecies.gradle'
 apply from: '../coverage-excludes.gradle'
+apply from: '../dependecies.gradle'
 apply from: '../jacocco.gradle'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 29
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.meli.challenge"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion 24
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
