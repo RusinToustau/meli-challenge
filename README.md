@@ -22,13 +22,18 @@ Para comprende el flujo mirar la documentación [más info del flujo...](https:/
 
 Inspirados un poco [en este tutorial](https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/) integramos jacoco a nuestra App para luego porder ver el coverage, e intrgrarlo con alguna herramienta de integración continua.
 
+**Comando para generar reporte:**`./gradlew clean jacocoTestReport`
+
 | |  |
 | ------ | ------ |
 | <img width="292" alt="Captura de Pantalla 2021-06-16 a la(s) 17 23 48" src="https://user-images.githubusercontent.com/28780954/122293398-584d2380-cecd-11eb-8a9a-c15a53cac867.png"> | <img width="400" alt="Captura de Pantalla 2021-06-16 a la(s) 18 16 06" src="https://user-images.githubusercontent.com/28780954/122295380-80d61d00-cecf-11eb-842a-60f95ff877bd.png"> |
 
-**Comando para generar reporte:**`./gradlew clean jacocoTestReport`
+### Integración
 
-### Librerías
+Se empezó una integracion con [GitActions](https://docs.github.com/es/actions) y la herrmainta [SonarCloud](https://sonarcloud.io/dashboard?id=RusinToustau_meli-challenge) en la que se continuará trabajando generar mas jobs y lograr ingrar el reporte de coverage con Jacoco. 
+
+
+## Librerías
 - [Android Support Library](https://developer.android.com/topic/libraries/support-library/index.html)
 - [Android Architecture Components](https://developer.android.com/topic/libraries/architecture)
 - [Retrofit for REST api communication](https://square.github.io/retrofit/)
