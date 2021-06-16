@@ -9,7 +9,7 @@ def kotlinDebugTree = fileTree(dir: "${buildDir}/tmp/kotlin-classes/debug", excl
 def mainSrc = "${project.projectDir}/src/main/java"
 def includes = [
         "jacoco/testDebugUnitTest.exec",
-        "outputs/code-coverage/connected/*coverage.ec",
+        "outputs/code-coverage/connected/*coverage.ec"
 ]
 
 task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {

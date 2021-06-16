@@ -3,6 +3,7 @@ def fileFilter = [
         '**/R$*.class',
         '**/BuildConfig.*',
         '**/Manifest*.*',
+        'com/meli/challenge/model*.*',
         '**/com/meli/challenge/model*.*',
         '**/*model/*.*',
         "**/*ViewHolder*.*",
