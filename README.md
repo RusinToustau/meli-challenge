@@ -18,8 +18,15 @@ Para comprende el flujo mirar la documentación [más info del flujo...](https:/
 <img width="292" alt="Captura de pantalla 2021-06-14 a la(s) 23 21 16" src="https://user-images.githubusercontent.com/28780954/121983203-50736f00-cd67-11eb-9828-b48854d1995d.png">
 
 
-## Manejo de Errores
+## Testing y Coverage 
 
+Inspirados un poco [en este tutorial](https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/) integramos jacoco a nuestra App para luego porder ver el coverage, e intrgrarlo con alguna herramienta de integración continua.
+
+| |  |
+| ------ | ------ |
+| <img width="292" alt="Captura de Pantalla 2021-06-16 a la(s) 17 23 48" src="https://user-images.githubusercontent.com/28780954/122293398-584d2380-cecd-11eb-8a9a-c15a53cac867.png"> | <img width="400" alt="Captura de Pantalla 2021-06-16 a la(s) 18 16 06" src="https://user-images.githubusercontent.com/28780954/122295380-80d61d00-cecf-11eb-842a-60f95ff877bd.png"> |
+
+**Comando para generar reporte:**`./gradlew clean jacocoTestReport`
 
 ### Librerías
 - [Android Support Library](https://developer.android.com/topic/libraries/support-library/index.html)
