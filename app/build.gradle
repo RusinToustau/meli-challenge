@@ -1,11 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id "org.sonarqube" version "3.3"
 }
+
+project.ext.set('versionNumber', '0.0.1-SNAPSHOT')
 
 apply from: '../coverage-excludes.gradle'
 apply from: '../dependecies.gradle'
 apply from: '../jacocco.gradle'
+apply from: '../sonar.gradle'
 
 android {
     compileSdkVersion 29
@@ -16,7 +20,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName project.ext.versionNumber
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
