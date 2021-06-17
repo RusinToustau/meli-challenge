@@ -103,7 +103,7 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
                 primaryButtonText = getString(R.string.retry_button),
                 onPrimaryButtonAction = getRetryAction()
             ),
-            addToBackStack = false,
+            addToBackStack = true,
             containerViewId = getViewContainer())
     }
 
@@ -113,7 +113,7 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
                 errorTitle = getString(R.string.unauthorized_title),
                 errorDescription = getString(R.string.unauthorized_description)
             ),
-            addToBackStack = false,
+            addToBackStack = true,
             containerViewId = getViewContainer())
     }
 
