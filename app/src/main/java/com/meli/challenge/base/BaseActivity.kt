@@ -44,10 +44,8 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
     private fun addIsLoadingObserver() {
         (getViewModel() as BaseViewModel<*>).isLoading.observe(this, Observer { isLoading ->
             if (isLoading) {
-                blockScreen()
                 getLoadingView().visibility = VISIBLE
             } else {
-                unBlockScreen()
                 getLoadingView().visibility = GONE
             }
         })
@@ -105,7 +103,7 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
                 primaryButtonText = getString(R.string.retry_button),
                 onPrimaryButtonAction = getRetryAction()
             ),
-            addToBackStack = true,
+            addToBackStack = false,
             containerViewId = getViewContainer())
     }
 
@@ -115,7 +113,7 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
                 errorTitle = getString(R.string.unauthorized_title),
                 errorDescription = getString(R.string.unauthorized_description)
             ),
-            addToBackStack = true,
+            addToBackStack = false,
             containerViewId = getViewContainer())
     }
 
