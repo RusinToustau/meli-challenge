@@ -1,10 +1,12 @@
 package com.meli.challenge.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.meli.challenge.databinding.GenericErrorFragmentBinding
 
@@ -79,5 +81,13 @@ class GenericErrorFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() { /*Keep in this Fragment*/ }
+        }
+        activity?.onBackPressedDispatcher?.addCallback(this,callback)
     }
 }
