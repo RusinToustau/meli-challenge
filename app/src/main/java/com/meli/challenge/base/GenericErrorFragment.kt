@@ -64,8 +64,8 @@ class GenericErrorFragment : Fragment() {
 
     private fun setPrimaryButtonAction(onPrimaryButtonAction: (() -> Unit)?) {
         binding.primaryButton.setOnClickListener {
-            activity?.onBackPressed()
-            onPrimaryButtonAction?.let { run(it) }
+            activity?.supportFragmentManager?.popBackStack()
+            onPrimaryButtonAction?.invoke()
         }
     }
 

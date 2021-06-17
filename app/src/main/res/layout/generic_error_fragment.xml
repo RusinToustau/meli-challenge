@@ -37,16 +37,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/primaryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        tools:visibility="visible"
-        android:layout_marginBottom="20dp"
+        style="@style/Widget.ML.Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Retry" />
+        android:visibility="gone"
+        tools:text="Retry"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
