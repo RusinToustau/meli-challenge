@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RusinToustau_meli-challenge&metric=alert_status)](https://sonarcloud.io/dashboard?id=RusinToustau_meli-challenge)
+
 ## Mercadolibre Challenge
 
 https://user-images.githubusercontent.com/28780954/121982007-15703c00-cd65-11eb-969f-aabdacc6f1e9.mp4
