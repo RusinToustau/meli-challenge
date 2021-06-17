@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.meli.challenge.databinding.GenericErrorFragmentBinding
+import com.meli.challenge.extensions.hideKeyBoard
 
 class GenericErrorFragment : Fragment() {
     private var _binding: GenericErrorFragmentBinding? = null
@@ -51,7 +52,7 @@ class GenericErrorFragment : Fragment() {
         setDescription(errorDescription)
         setPrimaryButtonText(primaryButtonText)
         setPrimaryButtonAction(onPrimaryButtonAction)
-
+        context?.hideKeyBoard(view)
     }
 
     private fun setPrimaryButtonText(buttonText: String?) {
@@ -63,10 +64,8 @@ class GenericErrorFragment : Fragment() {
 
     private fun setPrimaryButtonAction(onPrimaryButtonAction: (() -> Unit)?) {
         binding.primaryButton.setOnClickListener {
-            onPrimaryButtonAction?.let { action ->
-                activity?.supportFragmentManager?.popBackStack()
-                action.invoke()
-            }
+            activity?.onBackPressed()
+            onPrimaryButtonAction?.let { run(it) }
         }
     }
 
