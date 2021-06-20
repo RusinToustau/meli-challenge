@@ -10,9 +10,9 @@ https://user-images.githubusercontent.com/28780954/121982007-15703c00-cd65-11eb-
 
 La idea de armar esta app surge a partir de un challenge que recibí esta semana por parte de mercado libre. 
 
-El fin de la misma es la de de pode mostrar el flujo de una búsqueda [cumpliendo con el enunciado](https://github.com/RusinToustau/meli-challenge/blob/feature/add_documentation/docs/enunciado.md).
+El fin de la misma es la de de pode mostrar el flujo de una búsqueda [cumpliendo con el enunciado](https://github.com/RusinToustau/meli-challenge/blob/develop/docs/enunciado.md).
 
-Para comprende el flujo mirar la documentación [más info del flujo...](https://github.com/RusinToustau/meli-challenge/blob/feature/add_documentation/docs/FLOW.md)
+Para comprende el flujo mirar la documentación [más info del flujo...](https://github.com/RusinToustau/meli-challenge/blob/develop/docs/FLOW.md)
 
 
 ## Arquitectura de app
