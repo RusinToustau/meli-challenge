@@ -36,7 +36,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Unit tests
-        run: bash ./gradle clean jacocoTestReport --stacktrace
+        run: bash ./gradlew clean jacocoTestReport --stacktrace
       - name: Unit tests results
         uses: actions/upload-artifact@v1
         with:
