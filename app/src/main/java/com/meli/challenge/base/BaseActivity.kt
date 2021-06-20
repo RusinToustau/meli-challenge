@@ -44,10 +44,8 @@ abstract class BaseActivity<T,B : ViewBinding> : AppCompatActivity() {
     private fun addIsLoadingObserver() {
         (getViewModel() as BaseViewModel<*>).isLoading.observe(this, Observer { isLoading ->
             if (isLoading) {
-                blockScreen()
                 getLoadingView().visibility = VISIBLE
             } else {
-                unBlockScreen()
                 getLoadingView().visibility = GONE
             }
         })

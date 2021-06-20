@@ -1,12 +1,15 @@
 package com.meli.challenge.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.meli.challenge.databinding.GenericErrorFragmentBinding
+import com.meli.challenge.extensions.hideKeyBoard
 
 class GenericErrorFragment : Fragment() {
     private var _binding: GenericErrorFragmentBinding? = null
@@ -49,7 +52,7 @@ class GenericErrorFragment : Fragment() {
         setDescription(errorDescription)
         setPrimaryButtonText(primaryButtonText)
         setPrimaryButtonAction(onPrimaryButtonAction)
-
+        context?.hideKeyBoard(view)
     }
 
     private fun setPrimaryButtonText(buttonText: String?) {
@@ -61,10 +64,8 @@ class GenericErrorFragment : Fragment() {
 
     private fun setPrimaryButtonAction(onPrimaryButtonAction: (() -> Unit)?) {
         binding.primaryButton.setOnClickListener {
-            onPrimaryButtonAction?.let { action ->
-                activity?.supportFragmentManager?.popBackStack()
-                action.invoke()
-            }
+            activity?.supportFragmentManager?.popBackStack()
+            onPrimaryButtonAction?.invoke()
         }
     }
 
@@ -79,5 +80,13 @@ class GenericErrorFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() { /*Keep in this Fragment*/ }
+        }
+        activity?.onBackPressedDispatcher?.addCallback(this,callback)
     }
 }
