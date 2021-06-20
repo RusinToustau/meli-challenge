@@ -1,6 +1,10 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RusinToustau_meli-challenge&metric=alert_status)](https://sonarcloud.io/dashboard?id=RusinToustau_meli-challenge)
-
 ## Mercadolibre Challenge
+
+
+| GithubActions | Coverage | Quality Gate|
+|---------------|----------|-------------|
+|![build_and anlaize workflow](https://github.com/RusinToustau/meli-challenge/actions/workflows/build_and_analyze.yml/badge.svg)|[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=RusinToustau_meli-challenge&metric=coverage)](https://sonarcloud.io/dashboard?id=RusinToustau_meli-challenge)|[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RusinToustau_meli-challenge&metric=alert_status)](https://sonarcloud.io/dashboard?id=RusinToustau_meli-challenge)|
+
 
 https://user-images.githubusercontent.com/28780954/121982007-15703c00-cd65-11eb-969f-aabdacc6f1e9.mp4
 
@@ -22,9 +26,20 @@ Para comprende el flujo mirar la documentación [más info del flujo...](https:/
 
 ## Testing y Coverage 
 
-Inspirados un poco [en este tutorial](https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/) integramos jacoco a nuestra App para luego porder ver el coverage, e intrgrarlo con alguna herramienta de integración continua.
+Inspirados un poco [en este tutorial](https://about.codecov.io/blog/code-coverage-for-android-development-using-kotlin-jacoco-github-actions-and-codecov/) integramos jacoco test report a nuestra App. 
 
 **Comando para generar reporte:**`./gradlew clean jacocoTestReport`
+
+## SonarCloud y CI
+
+También está integrada con SonarCloud. 
+
+¿ Por qué SonarCloud ?
+
+Al ser un repositorio público tenemos posibilidad de usar esta herramienta en forma gratuita.  
+
+Para porder integrar el reporte de Jacoco con Sonar hubo que utilizar otra herramienta de integración contínua. en este caso usamos [Github Actions](https://github.com/features/actions).
+
 
 | |  |
 | ------ | ------ |
