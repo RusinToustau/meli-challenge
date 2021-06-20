@@ -16,5 +16,6 @@ sonarqube {
         property "sonar.junit.reportsPath", "build/test-results/testDebugUnitTest"
         property "sonar.exclusions", project().ext.excludes.string
         property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+        property "sonar.kotlin.detekt.reportPaths", "build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
     }
 }
