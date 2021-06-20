@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id "org.sonarqube" version "3.3"
 }
 
 project.ext.set('versionNumber', '0.0.1-SNAPSHOT')
