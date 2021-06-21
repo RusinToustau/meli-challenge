@@ -7,6 +7,7 @@ sonarqube {
         property "sonar.organization", "rusintoustau"
         property "sonar.host.url", "https://sonarcloud.io"
 
+        property "sonar.projectName", "Meli Example"
         property "sonar.projectVersion", getProject().ext.versionNumber
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.tests", "src/test/java"
@@ -14,7 +15,7 @@ sonarqube {
         property "sonar.scm.provider", "git"
         property "sonar.java.coveragePlugin", "jacoco"
         property "sonar.junit.reportsPath", "build/test-results/testDebugUnitTest"
-//        property "sonar.exclusions", project().ext.excludes.string
+        property "sonar.exclusions", project.ext.excludes.string
         property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
         property "sonar.kotlin.detekt.reportPaths", "build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
     }
